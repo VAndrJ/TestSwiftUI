@@ -1,4 +1,4 @@
-# A simple project to render a UI Layout in SwiftUI
+# A simple project to render a UI Layout in SwiftUI getting the rendering time to compare against UIKit
 
 The layout consist in a simple ScrollView having a nested VStack containing 100 rows.
 Each row has its own layout consisting in a HStack containing an Image and a Text.
