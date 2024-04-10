@@ -9,14 +9,16 @@ struct ContentView: View {
         ScrollView {
             Text("Time to render: \(elapsedTime) seconds")
             VStack {
-                ForEach(1...100, id: \.self) { index in
+                ForEach(1...1000, id: \.self) { index in
                     Row(image: "globe", text: "Hello, world #\(index)!")
                 }
             }
             .padding()
         }
         .onAppear(perform: {
-            elapsedTime = CFAbsoluteTimeGetCurrent() - start
+            let currentTime = CFAbsoluteTimeGetCurrent()
+            elapsedTime = currentTime - start
+            print(currentTime - initTime)
         })
     }
 }

@@ -7,8 +7,15 @@
 
 import SwiftUI
 
+var initTime: CFAbsoluteTime!
+
 @main
 struct TestSwiftUIApp: App {
+
+    init() {
+        initTime = CFAbsoluteTimeGetCurrent()
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
